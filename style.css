@@ -1,0 +1,51 @@
+body {
+  background-color: whitesmoke;
+}
+
+.wheel-container {
+  position: relative;
+}
+
+.wheel {
+  position: absolute;
+  top: 15px;
+  width: 70%;
+  height: auto;
+}
+
+.wheel-background-element {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.blur-animation {
+  animation: blur 10s;
+}
+
+@keyframes blur {
+  0% {
+    filter: blur(1px);
+  }
+  25% {
+    filter: blur(0.75px);
+  }
+  50% {
+    filter: blur(0.5px);
+  }
+  75% {
+    filter: blur(0.25px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
