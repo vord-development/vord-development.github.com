@@ -14,7 +14,7 @@ const rewards = {
     end: 63,
   },
   3: {
-    name: "Drzac za gel",
+    name: "Drzac za tel",
     start: 66,
     end: 108,
   },
@@ -39,7 +39,7 @@ const rewards = {
     end: 288,
   },
   8: {
-    name: "Drzac za gel",
+    name: "Drzac za tel",
     start: 291,
     end: 333,
   },
@@ -54,19 +54,19 @@ button.addEventListener("click", () => {
   button.style.pointerEvents = "none";
   let rewardNumber = randomReward({
     1: 0.04,
-    2: 0.17,
-    3: 0.08,
+    2: 0.08,
+    3: 0.17,
     4: 0.17,
-    5: 0.17,
+    5: 0.08,
     6: 0.08,
     7: 0.17,
-    8: 0.08,
+    8: 0.17,
     9: 0.04,
   });
   let reward = rewards[rewardNumber];
   let rewardRange = reward.end - reward.start;
   deg = Math.floor(3600 + reward.start + Math.random() * rewardRange);
-  wheel.style.transition = "all 7s ease-out";
+  wheel.style.transition = "all 5s ease-out";
   wheel.style.transform = `rotate(${deg}deg)`;
 });
 
