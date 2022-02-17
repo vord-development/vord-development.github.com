@@ -54,26 +54,23 @@ button.addEventListener("click", () => {
   button.style.pointerEvents = "none";
   let rewardNumber = randomReward({
     1: 0.04,
-    2: 0.15,
+    2: 0.17,
     3: 0.08,
-    4: 0.15,
-    5: 0.15,
+    4: 0.17,
+    5: 0.17,
     6: 0.08,
-    7: 0.15,
+    7: 0.17,
     8: 0.08,
-    9: 0.08,
-    10: 0.04,
+    9: 0.04,
   });
   let reward = rewards[rewardNumber];
   let rewardRange = reward.end - reward.start;
   deg = Math.floor(3600 + reward.start + Math.random() * rewardRange);
   wheel.style.transition = "all 7s ease-out";
   wheel.style.transform = `rotate(${deg}deg)`;
-  wheel.classList.add("blur-animation");
 });
 
 wheel.addEventListener("transitionend", () => {
-  wheel.classList.remove("blur-animation");
   wheel.style.transition = "none";
   wheel.style.transform = `rotate(${deg % 360}deg)`;
   button.style.pointerEvents = "auto";
