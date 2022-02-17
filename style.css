@@ -2,25 +2,35 @@ body {
   background-color: whitesmoke;
 }
 
-.wheel-container {
-  position: relative;
-}
-
-.wheel {
-  position: absolute;
-  top: 15px;
-  width: 70%;
-  height: auto;
-}
-
-.wheel-background-element {
-  position: absolute;
-  top: 0;
+.logo {
   width: 100%;
   height: auto;
 }
 
+.wheel-container {
+  margin: -50px 0px -30px 0px;
+}
+
+@media (min-width: 992px) {
+  .wheel-container {
+    margin: -100px 0px -70px 0px;
+  }
+}
+
+.wheel-element {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .wheel-element {
+    width: 90%;
+  }
+}
+
 .button {
+  width: 100%;
+  height: auto;
   cursor: pointer;
 }
 
@@ -29,23 +39,17 @@ body {
 }
 
 .blur-animation {
-  animation: blur 10s;
+  animation: blur 7s;
 }
 
 @keyframes blur {
   0% {
     filter: blur(1px);
   }
-  25% {
-    filter: blur(0.75px);
-  }
   50% {
     filter: blur(0.5px);
   }
   75% {
-    filter: blur(0.25px);
-  }
-  100% {
-    filter: blur(0px);
+    filter: blur(0);
   }
 }

@@ -17,14 +17,34 @@
 
   <body>
     <div class="container">
+      <div class="row justify-content-center justify-content-lg-start">
+        <div class="col-10 col-sm-8 col-md-6 col-lg-4 col-xl-2 offset-xl-1">
+          <img src="./logo.png" class="logo" />
+        </div>
+      </div>
       <div class="row justify-content-center">
         <div
-          class="col-sm-12 col-md-10 col-lg-8 col-xl-7 d-flex justify-content-center wheel-container"
+          class="col-12 col-sm-10 col-md-8 col-lg-6 d-flex justify-content-center"
         >
-          <img src="./logo.png" class="wheel-background-element" />
-          <img src="./wheel.png" class="wheel" />
-          <img src="./arrow.png" class="wheel-background-element" />
-          <img src="./button.png" class="wheel-background-element button" />
+          <div
+            class="wheel-container position-relative d-flex justify-content-center"
+          >
+            <img
+              src="./wheel.png"
+              class="position-relative wheel wheel-element"
+            />
+            <img
+              src="./arrow.png"
+              class="position-absolute top-50 start-50 translate-middle wheel-element"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div
+          class="col-8 offset-2 col-sm-6 offset-sm-3 col-md-4 offset-md-4 col-lg-3 offset-lg-8 col-xl-2 offset-xl-9"
+        >
+          <img src="./button.png" class="button" />
         </div>
       </div>
     </div>
